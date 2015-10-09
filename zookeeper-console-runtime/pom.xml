@@ -23,6 +23,10 @@
 		</dependency>
 
 		<dependency>
+			<groupId>commons-configuration</groupId>
+			<artifactId>commons-configuration</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>com.github.adyliu</groupId>
 			<artifactId>zkclient</artifactId>
 		</dependency>
