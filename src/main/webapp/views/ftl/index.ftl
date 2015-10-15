@@ -2,9 +2,9 @@
 <html>
 	<head>
 		<title>Zookeeper-Web</title>
-		<script src="${host}/js/jquery.min.js" type="text/javascript"></script>
-		<link href="${host}/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-		<link href="${host}/css/zk-web.css" rel="stylesheet" type="text/css">
+		<script src="${contextPath}/js/jquery.min.js" type="text/javascript"></script>
+		<link href="${contextPath}/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link href="${contextPath}/css/zk-web.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
     <div class="container-full">
@@ -13,9 +13,9 @@
             <h1 class="" contenteditable="false">Zookeeper Web</h1>
             <p class="lead">简单一点 方便一点</p>
             <br class="">
-            <form class="col-lg-12"  action="${host}/read/addr" method="get">
+            <form class="col-lg-12"  action="${contextPath}/read/addr" method="get">
                 <div class="input-group input-group-lg col-sm-offset-4 col-sm-4">
-                    <input type="text" name="cxnstr" required class="center-block form-control input-lg" title="输入zookeeper地址." placeholder="Connect String: host[:port][/namespace]">
+                    <input type="text" name="cxnstr" required class="center-block form-control input-lg" title="输入zookeeper地址." placeholder="Connect String: contextPath[:port][/namespace]">
                   	<span class="input-group-btn"><button class="btn btn-lg btn-primary" type="submit">GO</button></span>
                 </div>
             </form>
@@ -40,14 +40,14 @@
 <div class="container">
     <hr class="">
     <div class="row">
-    	<#if addrs??>
-		<#list addrs?keys as key>
+    	<#if zkServers??>
+		<#list zkServers?keys as key>
 		<div class="col-md-4">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                     <a href="${host}/read/addr?cxnstr=${addrs[key]!''}"><h3 contenteditable="false">${key!''}</h3></a>
+                     <a href="${contextPath}/read/addr?cxnstr=${zkServers[key]!''}"><h3 contenteditable="false">${key!''}</h3></a>
                 </div>
-                <div class="panel-body wrap" contenteditable="false">${addrs[key]!''}</div>
+                <div class="panel-body wrap" contenteditable="false">${zkServers[key]!''}</div>
             </div>
         </div>
 		</#list>

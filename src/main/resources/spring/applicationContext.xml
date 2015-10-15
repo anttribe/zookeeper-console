@@ -14,7 +14,7 @@
 	<context:component-scan base-package="org.anttribe.zookeeper.console" />
 
 	<!-- 全局应用配置文件 -->
-	<util:properties id="application" location="classpath:application.properties" />
+	<util:properties id="application" location="classpath:conf/application.properties" />
 
 	<bean
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
@@ -25,7 +25,7 @@
 
 	<bean id="configuration"
 		class="org.apache.commons.configuration.PropertiesConfiguration">
-		<constructor-arg value="application.properties" />
+		<constructor-arg value="conf/application.properties" />
 	</bean>
 
 	<bean class="org.anttribe.zookeeper.console.common.Global"

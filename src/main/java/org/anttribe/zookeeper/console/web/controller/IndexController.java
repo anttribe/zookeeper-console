@@ -29,7 +29,7 @@ public class IndexController
         String servers = Global.me().getString(ConfigConstants.Keys.ZK_SERVERS);
         if (!StringUtils.isEmpty(servers))
         {
-            String[] subServers = StringUtils.split(";");
+            String[] subServers = StringUtils.split(servers, ";");
             if (!ArrayUtils.isEmpty(subServers))
             {
                 for (String subServer : subServers)
@@ -40,7 +40,7 @@ public class IndexController
                         continue;
                     }
                     
-                    String[] zkServer = subServer.split(":");
+                    String[] zkServer = StringUtils.split(subServer, "=");
                     if (ArrayUtils.isEmpty(zkServer) || zkServer.length != 2)
                     {
                         continue;
