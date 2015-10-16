@@ -9,16 +9,18 @@
 		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 	<context:component-scan base-package="org.anttribe.zookeeper.console.web.controller" />
+
 	<mvc:annotation-driven />
 
-	<mvc:resources mapping="/js/**" location="/resources/js/"
-		cache-period="86400" />
-	<mvc:resources mapping="/css/**" location="/resources/css/"
-		cache-period="86400" />
-	<mvc:resources mapping="/img/**" location="/resources/img/"
-		cache-period="86400" />
-	<mvc:resources mapping="/fonts/**" location="/resources/fonts/"
-		cache-period="86400" />
+	<mvc:default-servlet-handler />
+
+	<!-- 使用ResourceHttpRequestHandler -->
+	<mvc:resources mapping="static/assets/**" location="/assets/"
+		cache-period="3600" />
+	<mvc:resources mapping="static/themes/**" location="/themes/"
+		cache-period="3600" />
+	<mvc:resources mapping="static/static/**" location="/static/"
+		cache-period="3600" />
 
 	<bean id="mappingJackson2HttpMessageConverter"
 		class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter" />
@@ -45,7 +47,7 @@
 		<property name="contentType" value="text/html;charset=UTF-8" />
 		<property name="suffix" value=".ftl" />
 		<property name="cache" value="false" />
-		<property name="order" value="200" />
+		<property name="order" value="0" />
 		<property name="requestContextAttribute" value="request" />
 	</bean>
 

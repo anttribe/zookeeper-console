@@ -2,9 +2,9 @@
 <html>
 	<head>
 		<title>Zookeeper-Web</title>
-		<script src="${host}/js/jquery.min.js" type="text/javascript"></script>
-		<link href="${host}/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-		<link href="${host}/css/zk-web.css" rel="stylesheet" type="text/css">
+		<script src="${contextPath}/js/jquery.min.js" type="text/javascript"></script>
+		<link href="${contextPath}/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link href="${contextPath}/css/zk-web.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
 
@@ -19,7 +19,7 @@
 					<p style="display:none">${stackTrace!}</p>
                 </div>
                 <div class="error-actions">
-                    <a href="${host}" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-home"></span> 回主页 </a>
+                    <a href="${contextPath}" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-home"></span> 回主页 </a>
                 </div>
             </div>
         </div>
