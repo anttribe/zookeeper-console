@@ -22,5 +22,7 @@ public class ConfigConstants
     public class Keys
     {
         public static final String ZK_SERVERS = "zk.servers";
+        
+        public static final String ZK_CONNECT_TIMEOUT = "zk.connect.timeout";
     }
 }

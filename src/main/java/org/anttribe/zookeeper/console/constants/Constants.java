@@ -8,5 +8,8 @@ package org.anttribe.zookeeper.console.constants;
  */
 public class Constants
 {
-    public static final String CX_STR = "cxnstr";
+    /**
+     * 默认的zkclient连接超时
+     */
+    public static final int DEFAULT_ZK_CONNECT_TIMEOUT = 6000;
 }

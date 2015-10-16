@@ -2,6 +2,7 @@ package org.anttribe.zookeeper.console.core;
 
 import java.nio.charset.Charset;
 import java.util.Arrays;
+import java.util.List;
 
 import org.apache.zookeeper.data.Stat;
 
@@ -16,6 +17,11 @@ public class ZkData
     private byte[] data;
     
     private Stat stat;
+    
+    /**
+     * 子路径
+     */
+    private List<String> children;
     
     @Override
     public String toString()
@@ -46,5 +52,15 @@ public class ZkData
     public void setStat(Stat stat)
     {
         this.stat = stat;
+    }
+    
+    public List<String> getChildren()
+    {
+        return children;
+    }
+    
+    public void setChildren(List<String> children)
+    {
+        this.children = children;
     }
 }

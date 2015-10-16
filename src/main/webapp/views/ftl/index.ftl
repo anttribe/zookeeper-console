@@ -11,7 +11,7 @@
                 <h1><@spring.message "app.name" /></h1>
                 <p><@spring.message "app.description" /></p>
                 <div class="clearfix"></div>
-                <form class="col-lg-12" action="${contextPath}/read/addr" method="get">
+                <form class="col-lg-12" action="${contextPath}/zkRead/connect" method="get">
                     <div class="input-group input-group-lg col-sm-offset-4 col-sm-4">
                         <input type="text" name="zkServer" required class="center-block form-control input-lg" title="" placeholder="<@spring.message 'app.zk.zkserver.placeholder' />">
                   	    <span class="input-group-btn"><button class="btn btn-lg btn-primary" type="submit"><@spring.message "app.common.btn.go" /></button></span>
@@ -27,7 +27,7 @@
 		                <div class="col-md-4">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <a href="${contextPath}/read/addr?zkServer=${zkServers[key]!''}"><h3>${key!''}</h3></a>
+                                    <a href="${contextPath}/zkRead/connect?zkServer=${zkServers[key]!''}"><h3>${key!''}</h3></a>
                                 </div>
                                 <div class="panel-body wrap">${zkServers[key]!''}</div>
                             </div>
