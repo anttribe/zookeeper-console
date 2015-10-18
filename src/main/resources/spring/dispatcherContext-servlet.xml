@@ -34,6 +34,9 @@
 		<property name="freemarkerVariables">
 			<map>
 				<entry key="xml_escape" value-ref="freemarkerXmlEscape" />
+				<entry key="isLogin">
+					<bean class="org.anttribe.zookeeper.console.web.freemarker.IsLogin" />
+				</entry>
 			</map>
 		</property>
 		<property name="configLocation" value="classpath:conf/freemarker.properties" />

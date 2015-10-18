@@ -3,7 +3,10 @@
 <html>
 	<head>
 		<title><@spring.message "app.name" /> - <@spring.message "app.description" /></title>
-		<link type="text/css" rel="stylesheet" href="static/static/css/zk.css">
+		<link type="text/css" rel="stylesheet" href="${contextPath}/static/assets/bootstrap/css/bootstrap.min.css">
+        <link type="text/css" rel="stylesheet" href="${contextPath}/static/static/css/base.css">
+        <link type="text/css" rel="stylesheet" href="${contextPath}/static/static/css/common.css">
+        <link type="text/css" rel="stylesheet" href="${contextPath}/static/static/css/zk.css">
 	</head>
 	<body>
         <div class="container-full">
@@ -36,5 +39,6 @@
 		        </#if>
             </div>
         </div>
+        <script type="text/javascript" src="${contextPath}/static/assets/jquery/jquery.min.js"></script>
 	</body>
 </html>

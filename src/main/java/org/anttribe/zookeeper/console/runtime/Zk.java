@@ -58,6 +58,7 @@ public class Zk
         {
             Collections.sort(children);
         }
+        zkdata.setChildren(children);
         return zkdata;
     }
     
